@@ -1,0 +1,34 @@
+[all:vars]
+ansible_connection=ssh
+ansible_user=centos
+ansible_ssh_pass=san
+
+
+[master]
+jenkins ansible_host=172.31.46.71
+[master_group]
+master
+[master_group:vars]
+ansible_connection=ssh
+ansible_user=centos
+ansible_ssh_pass=san
+
+
+[master]
+172.31.46.71
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=centos
+ansible_ssh_pass=./san
+
+[master]
+docker ansible_host=34.127.80.124
+[master_group]
+master
+
+[master:vars]
+ansible_user=maanya
+ansible_ssh_pass=san
+ansible_connection=ssh 
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'

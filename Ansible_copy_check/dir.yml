@@ -1,0 +1,10 @@
+---
+- hosts: master
+  gather_facts: no
+  remote_user: centos
+  tasks:
+    - name: Create a directory
+      file:
+        path: /tmp/lenovo
+        state: directory
+        mode: 0755

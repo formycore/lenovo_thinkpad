@@ -1,0 +1,12 @@
+---
+all:
+  children:
+    master:
+      hosts:
+        docker:
+          ansible_host: 34.127.80.124
+    vars:
+      ansible_connection: ssh
+      ansible_user: maanya
+      ansible_ssh_pass: san
+      
